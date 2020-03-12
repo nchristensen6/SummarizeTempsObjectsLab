@@ -28,9 +28,15 @@ namespace SummarizeTempsObjects
         public int TempsAboveThreshold(int threshold)
         {
             // add logic to calculate temps above the threshold
-            int HighTemps;
-
-            return 0 ; // <-- Replace this with the number
+            int HighTemps=0;
+            foreach( int element in _temperatures)
+            {
+                if (element > threshold) ;
+                {
+                    count++;
+                }
+            }
+            return count; // <-- Replace this with the number
         }
 
         public int TempsBelowThreshold(int threshold)
