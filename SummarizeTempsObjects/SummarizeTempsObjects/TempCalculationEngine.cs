@@ -31,12 +31,12 @@ namespace SummarizeTempsObjects
             int HighTemps=0;
             foreach( int element in _temperatures)
             {
-                if (element > threshold) ;
+                if (element > threshold) 
                 {
-                    count++;
+                    HighTemps++;
                 }
             }
-            return count; // <-- Replace this with the number
+            return HighTemps; // <-- Replace this with the number
         }
 
         public int TempsBelowThreshold(int threshold)
@@ -56,7 +56,15 @@ namespace SummarizeTempsObjects
         public int TempsAtThreshold(int threshold)
         {
             // add logic to calculate and return temps at the threshold
-            return 0; // <-- Replace this with the number
+            int TempsatThreshold=0;
+            foreach (int element in _temperatures) 
+            {
+                if (element == threshold)
+                {
+                    TempsatThreshold++;
+                }
+            }
+            return TempsatThreshold; // <-- Replace this with the number
         }
 
         public int NumberOfTemperatures()
